@@ -73,21 +73,21 @@ PERSIST_DIRECTORY = "./Week_3_27Sep2025"
 with st.expander("💡 Sample Questions", expanded=False):
     st.markdown("### Get started with these example questions:")
 
-    # Pop Culture References
-    st.markdown("**🦸 Pop Culture References**")
+    # Examples and class prep
+    st.markdown("**🦸 Class prep**")
     col1, col2 = st.columns(2)
 
     with col1:
-        if st.button("🎭 The Matrix Re-Write", key="q1"):
+        if st.button("🎭 Cases", key="q1"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
-            st.session_state.sample_question = "If the 'Matrix' was an organization's business process, how would BPR, BPI, and BPM approach fixing its flaws? Use a sci-fi analogy."
+            st.session_state.sample_question = "what all organizations are used as example in this session and for what key learnings, make a table."
 
     with col2:
-        if st.button("🤖 Iron Man's AI", key="q2"):
+        if st.button("🤖 Confused about Strategy", key="q2"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
-            st.session_state.sample_question = "In the context of Tony Stark and J.A.R.V.I.S./F.R.I.D.A.Y., what are the can be possible options of using AI for automated decision-making in BPM?"
+            st.session_state.sample_question = "what is strategy? what is difference between digital and AI strategy?"
 
     # Simple Explanations
     st.markdown("**👶 Simple Explanations**")
@@ -100,10 +100,10 @@ with st.expander("💡 Sample Questions", expanded=False):
             st.session_state.sample_question = "Explain the difference between BPR (tossing out the old recipe) and BPI (tweaking the old recipe) to a five-year-old using a baking analogy."
 
     with col4:
-        if st.button("⚽ Team Sports Analogy", key="q4"):
+        if st.button("Summary made simple", key="q4"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
-            st.session_state.sample_question = "Why is managing a cross-functional business process like coordinating a football team's offense, and how does information systems act as the quarterback?"
+            st.session_state.sample_question = "Please summarize all the content in this session in points and tables."
 
     # Analogies
     st.markdown("**🔗 Examples**")
@@ -111,7 +111,7 @@ with st.expander("💡 Sample Questions", expanded=False):
 
 
     with col5:
-        if st.button("COVID-19 test booking example", key="q5"):
+        if st.button(" Example", key="q5"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
             st.session_state.sample_question = "Use the COVID-19 test booking example or the digital ATC tower case explain key concepts and lessons of this session)."
