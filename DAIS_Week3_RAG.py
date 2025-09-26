@@ -107,7 +107,7 @@ with st.expander("💡 Sample Questions", expanded=False):
 
     # Analogies
     st.markdown("**🔗 Analogies**")
-    col5, col6 = st.columns(2)
+    col5, col6, col7 = st.columns(3)
 
     with col5:
         if st.button("🏗️ Skyscraper vs. Tool", key="q5"):
