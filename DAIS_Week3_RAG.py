@@ -106,21 +106,16 @@ with st.expander("💡 Sample Questions", expanded=False):
             st.session_state.sample_question = "Why is managing a cross-functional business process like coordinating a football team's offense, and how does information systems act as the quarterback?"
 
     # Analogies
-    st.markdown("**🔗 Analogies**")
-    col5, col6, col7 = st.columns(3)
+    st.markdown("**🔗 Examples**")
+    col5, col6 = st.columns(2)
+
 
     with col5:
-        if st.button("🏗️ Skyscraper vs. Tool", key="q5"):
-            if 'sample_question' not in st.session_state:
-                st.session_state.sample_question = None
-            st.session_state.sample_question = "Compare a BPM initiative to building a skyscraper versus buying a new hammer. Why is it a 'business project' (skyscraper) and not a 'technology project' (hammer)?"
-
-    with col6:
         if st.button("COVID-19 test booking example", key="q6"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
             st.session_state.sample_question = "Use the COVID-19 test booking example or the digital ATC tower case explain key concepts and lessons of this session)."
-    with col7:
+    with col6:
         #  QUESTION on AI Strategy (Relevance)
         if st.button("🛠️ Doctor's Toolbag", key="q6"):
             if 'sample_question' not in st.session_state:
