@@ -111,7 +111,7 @@ with st.expander("💡 Sample Questions", expanded=False):
 
 
     with col5:
-        if st.button("COVID-19 test booking example", key="q6"):
+        if st.button("COVID-19 test booking example", key="q5"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
             st.session_state.sample_question = "Use the COVID-19 test booking example or the digital ATC tower case explain key concepts and lessons of this session)."
