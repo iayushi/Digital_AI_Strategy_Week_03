@@ -31,7 +31,7 @@ os.environ["PYTORCH_ENABLE_META_TENSOR"] = "0"
 
 st.title("Course : Digital AI strategy")
 
-st.subheader ("Week 1: Foundations of IS, IT, Digital Platform, AI, and Business Strategy")
+st.subheader ("Week 3: Business process analysis & Digital and AI value analysis (within organisation)")
 
 # Sidebar: Choose provider & keys
 provider = st.sidebar.selectbox(
@@ -65,62 +65,68 @@ st.sidebar.markdown(
 ### Change the below chroma DB path for changing the the vector DB
 
 # Load prebuilt chroma DB path 
-PERSIST_DIRECTORY = "./Week_1_31Aug2025"
+PERSIST_DIRECTORY = "./Week_3_27Sep2025"
 
 ### --------------------
 
 # Sample Questions Section - Available without API key
 with st.expander("💡 Sample Questions", expanded=False):
     st.markdown("### Get started with these example questions:")
-    
+
     # Pop Culture References
     st.markdown("**🦸 Pop Culture References**")
     col1, col2 = st.columns(2)
-    
+
     with col1:
-        if st.button("🎭 Marvel Fan Explanation", key="q1"):
+        if st.button("🎭 The Matrix Re-Write", key="q1"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
-            st.session_state.sample_question = "How are content in this session related to Digital Platform, AI, and Business Strategy ? Explain to a Marvel fan."
-    
+            st.session_state.sample_question = "If the 'Matrix' was an organization's business process, how would BPR, BPI, and BPM approach fixing its flaws? Use a sci-fi analogy."
+
     with col2:
-        if st.button("🦾 Black Panther and IT", key="q2"):
+        if st.button("🤖 Iron Man's AI", key="q2"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
-            st.session_state.sample_question = "If the some advance IT, like genAI, was available only to residents of Wakanda will it matter or not? "
-    
+            st.session_state.sample_question = "In the context of Tony Stark and J.A.R.V.I.S./F.R.I.D.A.Y., what are the can be possible options of using AI for automated decision-making in BPM?"
+
     # Simple Explanations
     st.markdown("**👶 Simple Explanations**")
     col3, col4 = st.columns(2)
-    
+
     with col3:
         if st.button("🧒 Explain to a 5-year-old", key="q3"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
-            st.session_state.sample_question = "Explain the learnings from this session to a five year old"
-    
+            st.session_state.sample_question = "Explain the difference between BPR (tossing out the old recipe) and BPI (tweaking the old recipe) to a five-year-old using a baking analogy."
+
     with col4:
-        if st.button("🦸‍♂️ Superhero Team Powers", key="q4"):
+        if st.button("⚽ Team Sports Analogy", key="q4"):
             if 'sample_question' not in st.session_state:
                 st.session_state.sample_question = None
-            st.session_state.sample_question = "If any IT was a super power, what could happen to challenge this superpower?"
-    
+            st.session_state.sample_question = "Why is managing a cross-functional business process like coordinating a football team's offense, and how does information systems act as the quarterback?"
+
     # Analogies
     st.markdown("**🔗 Analogies**")
     col5, col6 = st.columns(2)
-    
-    with col5:
-        if st.button("🧱 LEGO Masterpiece", key="q5"):
-            if 'sample_question' not in st.session_state:
-                st.session_state.sample_question = None
-            st.session_state.sample_question = "Compare digital and AI Strategy based on this session readings to building a LEGO masterpiece"
-    
-    with col6:
-        if st.button("🎮 Video Game Platforms", key="q6"):
-            if 'sample_question' not in st.session_state:
-                st.session_state.sample_question = None
-            st.session_state.sample_question = "How would you explain value generation from IT to someone who loves video games?"
 
+    with col5:
+        if st.button("🏗️ Skyscraper vs. Tool", key="q5"):
+            if 'sample_question' not in st.session_state:
+                st.session_state.sample_question = None
+            st.session_state.sample_question = "Compare a BPM initiative to building a skyscraper versus buying a new hammer. Why is it a 'business project' (skyscraper) and not a 'technology project' (hammer)?"
+
+    with col6:
+        if st.button("COVID-19 test booking example", key="q6"):
+            if 'sample_question' not in st.session_state:
+                st.session_state.sample_question = None
+            st.session_state.sample_question = "Use the COVID-19 test booking example or the digital ATC tower case explain key concepts and lessons of this session)."
+    with col7:
+        #  QUESTION on AI Strategy (Relevance)
+        if st.button("🛠️ Doctor's Toolbag", key="q6"):
+            if 'sample_question' not in st.session_state:
+                st.session_state.sample_question = None
+            st.session_state.sample_question = "How do you decide if AI is a necessary 'new tool' for your business, or just a costly distraction?"
+            
 model = None
 
 if api_key:
